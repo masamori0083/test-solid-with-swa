@@ -1,6 +1,7 @@
 import { createResource, createSignal } from 'solid-js';
 import styles from './App.module.css';
 
+// 変更
 function App() {
   const [message, setMessage] = createSignal('');
   const [postResult, setPostResult] = createSignal('');
