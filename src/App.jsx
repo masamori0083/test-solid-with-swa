@@ -7,14 +7,14 @@ function App() {
   const [postResult, setPostResult] = createSignal('');
 
   const [getData] = createResource( async() => {
-    const response = await fetch('http://localhost:8000/api');
+    const response = await fetch('/api');
     const data = await response.json();
     return data.message;
   });
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:8000/api/echo', {
+    const response = await fetch('/api/echo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
